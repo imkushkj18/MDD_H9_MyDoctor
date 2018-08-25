@@ -1,3 +1,32 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mdd";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+if(isset($_POST['btnsubmit']))
+{
+$Name=$_POST['Name'];
+
+// sql to delete a record
+$sql = "DELETE FROM mydoctor WHERE Name='$Name'";
+
+if (mysqli_query($conn, $sql) === TRUE) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . $conn->error;
+}
+}
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,27 +72,26 @@ body, html {
 <div class="bg">
 	
 
- <h1 align="center" style="padding-top:10%;"><b></b></h1>
- 
+<h1 align="center"><b></b></h1>
+
 <div align="center">
  
 
 <div class="form-style-6">
-      <form action="data.php" method="POST">
+      <form action="delete.php" method="POST">
 
 <h1 style="text"><b>Welcome to My Doctor</b></h1>
-<input type="text" name="field1" placeholder="Chennai" />
-<input type="email" name="field2" placeholder="Search Doctors,clinics,hospitals,etc.." />
-<input type="submit" value=" Submit " name="btnsubmit" required="true"> <form action ="data.php" method="get">
+<input type="text" name="Name" placeholder="Name" />
+<input type="submit" value=" Submit " name="btnsubmit" required="true">
 
 </form>
 
 <style type="text/css">
 .form-style-6{
     font: 95% Arial, Helvetica, sans-serif;
-    max-width: 500px;
+    max-width: 400px;
     margin: 10px auto;
-    padding: 16px;
+    padding: 8px;
     background: #F7F7F7;
 }
 .form-style-6 h1{
@@ -143,5 +171,15 @@ body, html {
     
 
 
+</body>
+</html>
+		
+				</table>
+				</form>
+				</div>
+                </div>
+			</div>
+			
+    
 </body>
 </html>

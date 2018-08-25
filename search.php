@@ -49,12 +49,30 @@ body, html {
  
 
 <div class="form-style-6">
-      <form action="data.php" method="POST">
+      <form action="sedata.php" method="POST">
 
-<h1 style="text"><b>Welcome to My Doctor</b></h1>
-<input type="text" name="field1" placeholder="Chennai" />
-<input type="email" name="field2" placeholder="Search Doctors,clinics,hospitals,etc.." />
-<input type="submit" value=" Submit " name="btnsubmit" required="true"> <form action ="data.php" method="get">
+<h1 style="text"><b>Serch Doctors by:</b></h1>
+   
+        Name <input type="radio" name="id">
+        &nbsp;&nbsp;    
+        Specilization <input type="radio" name="id">
+        &nbsp;&nbsp;    
+        Location <input type="radio" name="id">
+
+<br><br>
+        <form action="sedata.php" method="POST">
+        <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        
+
+          </button>
+
+        </div>
+        <input type="submit" value=" Submit " name="btnsubmit" required="true"> <form action ="sedata.php" method="get">
+
+      </div>
+</div>
+    </form>
 
 </form>
 
@@ -69,7 +87,7 @@ body, html {
 .form-style-6 h1{
     background: #43D1AF;
     padding: 20px 0;
-    font-size: 140%;
+    font-size: 150%;
     font-weight: 300;
     text-align: center;
     color: #fff;

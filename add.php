@@ -1,3 +1,40 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mdd";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+if(isset($_POST['btnsubmit']))
+{
+$Name = $_POST['Name'];
+$Qualification = $_POST['Qualification'];
+$Specilization = $_POST['Specilization'];
+$Experience= $_POST['Experience'];
+$Fees = $_POST['Fees'];
+$Timings = $_POST['Timings'];
+$Phone = $_POST['Phone'];
+$Location = $_POST['Location'];
+
+$sql = "INSERT INTO mydoctor(Name,Qualification,Specilization,Experience,Fees,Timings,Phone,Location)
+VALUES('$Name', '$Qualification', '$Specilization', $Experience, '$Fees', '$Timings','$Phone','$Location')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,27 +80,37 @@ body, html {
 <div class="bg">
 	
 
- <h1 align="center" style="padding-top:10%;"><b></b></h1>
- 
+<h1 align="center"><b></b></h1>
+
 <div align="center">
  
 
 <div class="form-style-6">
-      <form action="data.php" method="POST">
+      <form action="add.php" method="POST">
 
 <h1 style="text"><b>Welcome to My Doctor</b></h1>
-<input type="text" name="field1" placeholder="Chennai" />
-<input type="email" name="field2" placeholder="Search Doctors,clinics,hospitals,etc.." />
-<input type="submit" value=" Submit " name="btnsubmit" required="true"> <form action ="data.php" method="get">
+<input type="text" name="Name" placeholder="Name" />
+<input type="text" name="Qualification" placeholder="Qualification" required />
+<input type="text" name="Specilization" placeholder="Specilization" required/>
+<input type="text" name="Experience" placeholder="Experience" required/>
+<input type="text" name="Fees" placeholder="Fees" required/>
+<input type="text" name="Timings" placeholder="Timings" required/>
+<input type="text" name="Phone" placeholder="Phone" required/>
+<input type="text" name="Location" placeholder="Location" required/>
+
+
+
+
+<input type="submit" value=" Submit " name="btnsubmit" required="true">
 
 </form>
 
 <style type="text/css">
 .form-style-6{
     font: 95% Arial, Helvetica, sans-serif;
-    max-width: 500px;
+    max-width: 400px;
     margin: 10px auto;
-    padding: 16px;
+    padding: 8px;
     background: #F7F7F7;
 }
 .form-style-6 h1{
@@ -143,5 +190,15 @@ body, html {
     
 
 
+</body>
+</html>
+		
+				</table>
+				</form>
+				</div>
+                </div>
+			</div>
+			
+    
 </body>
 </html>

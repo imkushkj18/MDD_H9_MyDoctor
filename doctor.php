@@ -48,15 +48,12 @@ body, html {
 <div align="center">
  
 
-<div class="form-style-6">
-      <form action="data.php" method="POST">
+<div class="form-style-6"> 
 
 <h1 style="text"><b>Welcome to My Doctor</b></h1>
-<input type="text" name="field1" placeholder="Chennai" />
-<input type="email" name="field2" placeholder="Search Doctors,clinics,hospitals,etc.." />
-<input type="submit" value=" Submit " name="btnsubmit" required="true"> <form action ="data.php" method="get">
-
-</form>
+ <a href="add.php" button type="button" class="btn btn-primary">Add</button>
+  <a href="data.php" button type="button" class="btn btn-info">View</button>
+  <a href="delete.php" button type="button" class="btn btn-danger">Delete</button>
 
 <style type="text/css">
 .form-style-6{
