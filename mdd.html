@@ -25,15 +25,14 @@ body, html {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">My Doctor</a>
+      <a class="navbar-brand" href="mdd.html">My Doctor</a>
     </div>
     <ul class="nav navbar-nav">
       
-      <li><a href="#">Book Appointment</a></li>
+      <!--<li><a href="#">Book Appointment</a></li>!-->
 
-      <li><a href="#">Medicine</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_drugs">Medicine</a></li>
+      <li><a href="aboutus.html">About</a></li>
 
     </ul>
 

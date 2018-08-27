@@ -1,40 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mdd";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-if(isset($_POST['btnsubmit']))
-{
-$Name = $_POST['Name'];
-$Qualification = $_POST['Qualification'];
-$Specilization = $_POST['Specilization'];
-$Experience= $_POST['Experience'];
-$Fees = $_POST['Fees'];
-$Timings = $_POST['Timings'];
-$Phone = $_POST['Phone'];
-$Location = $_POST['Location'];
-
-$sql = "INSERT INTO mydoctor(Name,Qualification,Specilization,Experience,Fees,Timings,Phone,Location)
-VALUES('$Name', '$Qualification', '$Specilization', $Experience, '$Fees', '$Timings','$Phone','$Location')";
-
-if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-mysqli_close($conn);
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,37 +42,30 @@ body, html {
 <div class="bg">
 	
 
-<h1 align="center"><b></b></h1>
-
+ <h1 align="center" style="padding-top:10%;"><b></b></h1>
+ 
 <div align="center">
  
 
 <div class="form-style-6">
-      <form action="add.php" method="POST">
+      <form action="data.php" method="POST">
 
 <h1 style="text"><b>Welcome to My Doctor</b></h1>
-<input type="text" name="Name" placeholder="Name" />
-<input type="text" name="Qualification" placeholder="Qualification" required />
-<input type="text" name="Specilization" placeholder="Specilization" required/>
-<input type="text" name="Experience" placeholder="Experience" required/>
-<input type="text" name="Fees" placeholder="Fees" required/>
-<input type="text" name="Timings" placeholder="Timings" required/>
-<input type="text" name="Phone" placeholder="Phone" required/>
-<input type="text" name="Location" placeholder="Location" required/>
+<p>My Doctor is a platform that will help in consolidating the Medical industry. All the doctors and hospitals in the country can come together on one stage.
 
+This platform allows the doctors to register themselves using their medical license and make an individual profile.  They can enlist their educational qualifications, years of experience, their speciality, hospitals they are available in, clinics they run on their own and their fees. This will help new doctors to Kickstart their clinocs and  get them recognition. It will help the users to find a suitable doctor in their area. 
 
+Users will be given the provision for rating the doctors based on various parameters and also write a feedback of their experience. This will keep the activities of both the parties in check.
 
-
-<input type="submit" value=" Submit " name="btnsubmit" required="true">
-
+Users will also be able to book an appointment and pay the fees online. They will also be able to compare hospitals and doctors as per their requirements.  We will assure quality and build trust. We will also provide exciting offers and cashbacks to attract more customers. This is a platform that brings structure to the working of the medical industry and our experience with the same.</p>
 </form>
 
 <style type="text/css">
 .form-style-6{
-    font: 95% Arial, Helvetica, sans-serif;
-    max-width: 400px;
+    font: 105% Arial, Helvetica, sans-serif;
+    max-width: 600px;
     margin: 10px auto;
-    padding: 8px;
+    padding: 16px;
     background: #F7F7F7;
 }
 .form-style-6 h1{
@@ -189,15 +145,5 @@ body, html {
     
 
 
-</body>
-</html>
-		
-				</table>
-				</form>
-				</div>
-                </div>
-			</div>
-			
-    
 </body>
 </html>

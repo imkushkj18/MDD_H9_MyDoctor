@@ -13,6 +13,83 @@ body, html {
     height: 100%;
     margin: 0;
 }
+.form-style-6{
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+.form-style-6 h1{
+    background: #43D1AF;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px #43D1AF;
+    padding: 3%;
+    border: 1px solid #43D1AF;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #43D1AF;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: #2EBC99;
+}
 </style>  
 </head>
 <body>
@@ -25,15 +102,14 @@ body, html {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">My Doctor</a>
+      <a class="navbar-brand" href="mdd.html">My Doctor</a>
     </div>
     <ul class="nav navbar-nav">
       
-      <li><a href="#">Book Appointment</a></li>
+      <!--<li><a href="#">Book Appointment</a></li>!-->
 
-      <li><a href="#">Medicine</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_drugs">Medicine</a></li>
+      <li><a href="aboutus.html">About</a></li>
 
     </ul>
 
@@ -51,10 +127,10 @@ body, html {
 <div class="form-style-6"> 
 
 <h1 style="text"><b>Welcome to My Doctor</b></h1>
- <a href="add.php" button type="button" class="btn btn-primary">Add</button>
-  <a href="data.php" button type="button" class="btn btn-info">View</button>
-  <a href="delete.php" button type="button" class="btn btn-danger">Delete</button>
-
+ <a href="add.php" button type="button" class="btn btn-primary">Add</a>
+  <a href="data.php" button type="button" class="btn btn-info">View</a>
+  <a href="delete.php" button type="button" class="btn btn-danger">Delete</a>
+<!-- 
 <style type="text/css">
 .form-style-6{
     font: 95% Arial, Helvetica, sans-serif;
@@ -133,12 +209,12 @@ body, html {
 .form-style-6 input[type="button"]:hover{
     background: #2EBC99;
 }
-</style>
+</style> -->
 </div>
 
 </div>
     
-
+</a>
 
 </body>
 </html>
